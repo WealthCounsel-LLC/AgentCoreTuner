@@ -1,3 +1,8 @@
+[build]
+# Limit parallel rustc jobs in WSL2 to prevent OOM during Tauri dev builds
+# (16 cores * full parallelism + Vite dev server can exhaust WSL memory)
+jobs = 8
+
 [target.x86_64-pc-windows-msvc]
 # Increase default stack size to avoid running out of stack
 # space in debug builds. The size matches Linux's default.

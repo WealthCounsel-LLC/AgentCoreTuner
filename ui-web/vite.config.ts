@@ -20,7 +20,11 @@ export default defineConfig({
         }
       : undefined,
     watch: {
-      ignored: ['**/src-tauri/**'],
+      // Use polling in WSL2 — native inotify is unreliable across
+      // the Windows/Linux filesystem boundary and can exhaust watchers.
+      usePolling: true,
+      interval: 1000,
+      ignored: ['**/src-tauri/**', '**/node_modules/**'],
     },
   },
   envPrefix: ['VITE_', 'TAURI_'],
