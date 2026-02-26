@@ -1,0 +1,27 @@
+{
+  "logGroups": [
+    {
+      "logGroupName": "/aws/bedrock-agentcore/runtimes/abc-123-DEFAULT",
+      "creationTime": 1700000000000,
+      "retentionInDays": 30,
+      "metricFilterCount": 0,
+      "arn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/bedrock-agentcore/runtimes/abc-123-DEFAULT",
+      "storedBytes": 1024
+    },
+    {
+      "logGroupName": "/aws/bedrock-agentcore/runtimes/def-456-DEFAULT",
+      "creationTime": 1700000001000,
+      "retentionInDays": 30,
+      "metricFilterCount": 0,
+      "arn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/bedrock-agentcore/runtimes/def-456-DEFAULT",
+      "storedBytes": 512
+    },
+    {
+      "logGroupName": "/aws/lambda/my-function",
+      "creationTime": 1700000002000,
+      "metricFilterCount": 0,
+      "arn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/lambda/my-function",
+      "storedBytes": 256
+    }
+  ]
+}

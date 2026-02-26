@@ -1,0 +1,18 @@
+{
+  "app": ".venv/bin/python cdk/app.py",
+  "watch": {
+    "include": ["agent/**", "cdk/**"]
+  },
+  "context": {
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+
+    "agentcoreRuntimeId": "YOUR_RUNTIME_ID",
+    "agentcoreRoleArn": "YOUR_ROLE_ARN",
+    "agentcoreBucket": "YOUR_BUCKET",
+
+    "defaultModelId": "us.anthropic.claude-sonnet-4-5-20251001-v1:0",
+    "defaultSystemPrompt": "You are a helpful assistant."
+  }
+}

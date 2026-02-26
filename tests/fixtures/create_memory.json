@@ -1,0 +1,12 @@
+{
+  "memory": {
+    "arn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:memory/mem-new123",
+    "id": "mem-new123",
+    "name": "my_test_memory",
+    "status": "CREATING",
+    "eventExpiryDuration": 30,
+    "createdAt": "2026-02-21T00:00:00Z",
+    "updatedAt": "2026-02-21T00:00:00Z",
+    "strategies": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "memory": {
+    "arn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:memory/mem-abc123",
+    "id": "mem-abc123",
+    "name": "Customer Support Memory",
+    "description": "Stores customer support conversation history",
+    "eventExpiryDuration": 30,
+    "status": "ACTIVE",
+    "createdAt": "2026-02-21T00:00:00Z",
+    "updatedAt": "2026-02-21T00:00:00Z",
+    "strategies": []
+  }
+}

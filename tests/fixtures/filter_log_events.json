@@ -1,0 +1,14 @@
+{
+  "events": [
+    {
+      "timestamp": 1700000000123,
+      "logStreamName": "stream-a",
+      "message": "Agent started\n"
+    },
+    {
+      "timestamp": 1700000001456,
+      "logStreamName": "stream-a",
+      "message": "Processing request\n"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "memories": [
+    {
+      "arn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:memory/mem-abc123",
+      "id": "mem-abc123",
+      "status": "ACTIVE",
+      "createdAt": "2026-02-21T00:00:00Z",
+      "updatedAt": "2026-02-21T00:00:00Z"
+    },
+    {
+      "arn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:memory/mem-def456",
+      "id": "mem-def456",
+      "status": "ACTIVE",
+      "createdAt": "2026-02-21T00:00:00Z",
+      "updatedAt": "2026-02-21T00:00:00Z"
+    }
+  ]
+}

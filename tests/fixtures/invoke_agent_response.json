@@ -1,0 +1,9 @@
+{
+  "result": {
+    "role": "assistant",
+    "content": [
+      { "text": "Hello! " },
+      { "text": "How can I help you today?" }
+    ]
+  }
+}

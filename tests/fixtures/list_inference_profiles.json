@@ -1,0 +1,25 @@
+{
+  "inferenceProfileSummaries": [
+    {
+      "inferenceProfileId": "us.anthropic.claude-sonnet-4-5-20251001-v1:0",
+      "inferenceProfileName": "US Anthropic Claude Sonnet 4.5",
+      "inferenceProfileArn": "arn:aws:bedrock:us-east-1::foundation-model/us.anthropic.claude-sonnet-4-5-20251001-v1:0",
+      "type": "SYSTEM_DEFINED",
+      "status": "ACTIVE"
+    },
+    {
+      "inferenceProfileId": "us.anthropic.claude-opus-4-20250514-v1:0",
+      "inferenceProfileName": "US Anthropic Claude Opus 4",
+      "inferenceProfileArn": "arn:aws:bedrock:us-east-1::foundation-model/us.anthropic.claude-opus-4-20250514-v1:0",
+      "type": "SYSTEM_DEFINED",
+      "status": "ACTIVE"
+    },
+    {
+      "inferenceProfileId": "my-custom-profile-001",
+      "inferenceProfileName": "My Tuned Claude Profile",
+      "inferenceProfileArn": "arn:aws:bedrock:us-east-1:123456789012:application-inference-profile/my-custom-profile-001",
+      "type": "APPLICATION",
+      "status": "ACTIVE"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "modelSummaries": [
+    {
+      "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "modelName": "Claude 3.5 Sonnet v2",
+      "providerName": "Anthropic",
+      "inputModalities": ["TEXT", "IMAGE"],
+      "outputModalities": ["TEXT"],
+      "inferenceTypesSupported": ["ON_DEMAND"]
+    },
+    {
+      "modelId": "amazon.titan-text-express-v1",
+      "modelName": "Titan Text G1 - Express",
+      "providerName": "Amazon",
+      "inputModalities": ["TEXT"],
+      "outputModalities": ["TEXT"],
+      "inferenceTypesSupported": ["ON_DEMAND"]
+    },
+    {
+      "modelId": "stability.stable-diffusion-xl-v1",
+      "modelName": "SDXL 1.0",
+      "providerName": "Stability AI",
+      "inputModalities": ["TEXT"],
+      "outputModalities": ["IMAGE"],
+      "inferenceTypesSupported": ["ON_DEMAND"]
+    }
+  ]
+}

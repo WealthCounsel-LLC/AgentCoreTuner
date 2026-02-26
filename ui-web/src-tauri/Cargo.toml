@@ -1,0 +1,51 @@
+[package]
+name = "agentcore-manager"
+version = "0.1.0"
+description = "AWS AgentCore Manager - Desktop app for managing AWS Bedrock AgentCore Runtimes"
+authors = ["AgentCore Team"]
+license = "MIT"
+repository = "https://github.com/ArcBeard/AgentCoreSuite"
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.5.4", features = [] }
+
+[dependencies]
+# Tauri
+tauri = { version = "2.10.0", features = ["devtools"] }
+tauri-plugin-log = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-clipboard-manager = "2"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Async runtime
+tokio = { version = "1", features = ["rt-multi-thread", "time", "macros"] }
+
+# Logging
+log = "0.4"
+
+# AWS SDK
+aws-config = { version = "1", features = ["behavior-version-latest"] }
+aws-sdk-sso = "1"
+aws-sdk-ssooidc = "1"
+aws-sdk-sts = "1"
+
+# Utilities
+base64 = "0.21"
+dirs = "5"
+git2 = "0.20.4"
+keyring = { version = "3", features = ["apple-native"] }
+open = "5"
+rust-ini = "0.21"
+sha1 = "0.10"
+
+[dev-dependencies]
+tempfile = "3.25.0"

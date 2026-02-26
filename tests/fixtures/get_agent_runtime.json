@@ -1,0 +1,39 @@
+{
+  "agentRuntimeArn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:runtime/MyRuntime-ExAmPlE123",
+  "agentRuntimeName": "MyRuntime",
+  "agentRuntimeId": "MyRuntime-ExAmPlE123",
+  "agentRuntimeVersion": "12",
+  "createdAt": "2026-02-21T05:51:17.867435+00:00",
+  "lastUpdatedAt": "2026-02-21T09:09:57.777173+00:00",
+  "roleArn": "arn:aws:iam::123456789012:role/service-role/AmazonBedrockAgentCoreRuntimeDefaultServiceRole-EXAMPLE",
+  "networkConfiguration": {
+    "networkMode": "PUBLIC"
+  },
+  "status": "READY",
+  "description": "Primary agent runtime for testing",
+  "lifecycleConfiguration": {
+    "idleRuntimeSessionTimeout": 900,
+    "maxLifetime": 28800
+  },
+  "protocolConfiguration": {
+    "serverProtocol": "HTTP"
+  },
+  "agentRuntimeArtifact": {
+    "codeConfiguration": {
+      "code": {
+        "s3": {
+          "bucket": "bedrock-agentcore-runtime-123456789012-us-east-1-example",
+          "prefix": "source/agent-bundle.zip"
+        }
+      },
+      "runtime": "PYTHON_3_13",
+      "entryPoint": [
+        "main.py"
+      ]
+    }
+  },
+  "environmentVariables": {
+    "LOG_LEVEL": "INFO",
+    "MAX_TURNS": "10"
+  }
+}

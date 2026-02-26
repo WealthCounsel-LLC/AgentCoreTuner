@@ -1,0 +1,20 @@
+{
+  "agentRuntimes": [
+    {
+      "agentRuntimeId": "abc-123",
+      "agentRuntimeName": "my-test-agent",
+      "agentRuntimeArn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:agent-runtime/abc-123",
+      "agentRuntimeVersion": "5",
+      "status": "READY",
+      "lastUpdatedAt": "2026-02-21T09:09:57.777173+00:00"
+    },
+    {
+      "agentRuntimeId": "def-456",
+      "agentRuntimeName": "another-agent",
+      "agentRuntimeArn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:agent-runtime/def-456",
+      "agentRuntimeVersion": "1",
+      "status": "CREATING",
+      "lastUpdatedAt": "2026-02-20T12:00:00.000000+00:00"
+    }
+  ]
+}
