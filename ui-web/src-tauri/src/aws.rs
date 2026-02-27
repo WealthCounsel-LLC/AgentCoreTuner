@@ -88,8 +88,8 @@ pub fn check_aws_cli_available() -> Result<String, String> {
     }
 }
 
-/// Returns the IAM ARN of the currently authenticated caller, or an empty string on failure.
-pub fn get_caller_identity(profile: &str, region: &str) -> String {
+/// Returns the IAM ARN of the currently authenticated caller, or an error on failure.
+pub fn get_caller_identity(profile: &str, region: &str) -> Result<String, String> {
     let cli = RealCli;
     match cli.run(
         "aws",
@@ -106,8 +106,16 @@ pub fn get_caller_identity(profile: &str, region: &str) -> String {
             region,
         ],
     ) {
-        Ok(o) if o.success => String::from_utf8_lossy(&o.stdout).trim().to_string(),
-        _ => String::new(),
+        Ok(o) if o.success => Ok(String::from_utf8_lossy(&o.stdout).trim().to_string()),
+        Ok(o) => {
+            let stderr = String::from_utf8_lossy(&o.stderr).trim().to_string();
+            Err(if stderr.is_empty() {
+                "sts get-caller-identity failed".to_string()
+            } else {
+                stderr
+            })
+        }
+        Err(e) => Err(e),
     }
 }
 
@@ -1567,7 +1575,7 @@ pub fn parse_invoke_response(raw: &str) -> (String, String) {
 }
 
 /// Runs `aws sso login` for the given profile.
-pub fn sso_login(profile: &str) -> Result<(), String> {
+pub fn sso_login_cli(profile: &str) -> Result<(), String> {
     let out = RealCli.run("aws", &["sso", "login", "--profile", profile])?;
     if out.success {
         Ok(())
